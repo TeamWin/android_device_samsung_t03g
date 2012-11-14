@@ -17,6 +17,11 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernAl
 
+PRODUCT_COPY_FILES += \
+        device/samsung/t0lteatt/modules/exfat_core.ko:lib/modules/exfat_core.ko
+PRODUCT_COPY_FILES += \
+        device/samsung/t0lteatt/modules/exfat_fs.ko:lib/modules/exfat_fs.ko
+
 #$(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_NAME := cm_n7100
