@@ -56,6 +56,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_INITRC := device/samsung/t0lteatt/recovery/init.rc
 
 # TWRP specific build flags
+BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_15x24.h\"
 DEVICE_RESOLUTION := 720x1280
 TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
