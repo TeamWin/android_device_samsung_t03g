@@ -20,6 +20,7 @@ on init
 # ko files for exfat
     insmod /lib/modules/exfat_core.ko
     insmod /lib/modules/exfat_fs.ko
+    write /sys/devices/platform/s5p-dsim.0/s6evr02/backlight/panel/brightness 180
 
 on boot
 
