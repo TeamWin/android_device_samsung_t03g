@@ -17,6 +17,7 @@ on init
     mkdir /preload
     mkdir /efs
     mkdir /external_sd
+    mkdir /usbstorage
     mount /tmp /tmp tmpfs
 
     chown root shell /tmp
@@ -26,6 +27,7 @@ on init
     insmod /lib/modules/exfat_core.ko
     insmod /lib/modules/exfat_fs.ko
 
+    echo 180 > /sys/devices/platform/s5p-dsim.0/s6evr02/backlight/panel/brightness
 on boot
 
     ifup lo
