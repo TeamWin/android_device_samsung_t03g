@@ -31,10 +31,11 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_SOC := exynos4210
 #TARGET_SOC := exynos4x12
 TARGET_HAL_PATH := hardware/samsung/exynos4/hal
+TARGET_ARCH := arm
 
 BOARD_KERNEL_CMDLINE :=  console=ttyHSL0,115200,n8 androidboot.hardware=jet
 BOARD_KERNEL_BASE :=  0x10000000
-BOARD_FORCE_RAMDISK_ADDRESS := 0x11000000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x11000000
 BOARD_KERNEL_PAGESIZE := 2048
 
 # These, I'm sure, are all WRONG!
