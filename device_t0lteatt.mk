@@ -18,11 +18,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernAl
 
 PRODUCT_COPY_FILES += \
-	device/samsung/t0lteatt/modules/exfat_core.ko:root/lib/modules/exfat_core.ko
-PRODUCT_COPY_FILES += \
-	device/samsung/t0lteatt/modules/exfat_fs.ko:root/lib/modules/exfat_fs.ko
+	device/samsung/t0lteatt/modules/exfat_core.ko:root/lib/modules/exfat_core.ko \
+	device/samsung/t0lteatt/modules/exfat_fs.ko:root/lib/modules/exfat_fs.ko \
+        device/samsung/t0lteatt/recovery/init.rc:root/init.rc
 
-#$(call inherit-product, build/target/product/full.mk)
+$(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_NAME := cm_t0lteatt
 PRODUCT_BRAND := Samsung
