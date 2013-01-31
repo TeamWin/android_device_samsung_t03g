@@ -18,11 +18,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernAl
 
 PRODUCT_COPY_FILES += \
-        device/samsung/t0lteatt/modules/exfat_core.ko:root/lib/modules/exfat_core.ko
-PRODUCT_COPY_FILES += \
-        device/samsung/t0lteatt/modules/exfat_fs.ko:root/lib/modules/exfat_fs.ko
+        device/samsung/n7100/recovery/init.rc:root/init.rc \
+        device/samsung/n7100/modules/exfat_fs.ko:root/system/lib/exfat_fs.ko \
+        device/samsung/n7100/modules/exfat_core.ko:root/system/lib/exfat_core.ko \
+        device/samsung/n7100/recovery/encryption/libkeyutils.so:root/sbin/libkeyutils.so \
+        device/samsung/n7100/recovery/encryption/libsec_ecryptfs.so:root/sbin/libsec_ecryptfs.so \
+        device/samsung/n7100/recovery/encryption/libsec_km.so:root/sbin/libsec_km.so
 
-#$(call inherit-product, build/target/product/full.mk)
+$(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_NAME := cm_n7100
 PRODUCT_BRAND := Samsung

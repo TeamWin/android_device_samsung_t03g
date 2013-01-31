@@ -16,10 +16,8 @@ on init
     mkdir /preload
     mkdir /efs
     mount /tmp /tmp tmpfs
-
-# ko files for exfat
-    insmod /lib/modules/exfat_core.ko
-    insmod /lib/modules/exfat_fs.ko
+    insmod /system/lib/exfat_core.ko
+    insmod /system/lib/exfat_fs.ko
     write /sys/devices/platform/s5p-dsim.0/s6evr02/backlight/panel/brightness 180
 
 on boot
@@ -56,5 +54,5 @@ on property:adb.recovery=1
 # Restart adbd so it can run as root
 on property:service.adb.root=1
     write /sys/class/android_usb/android0/enable 0
-    restart adbd
+    restart adbd /sbin/sh
     write /sys/class/android_usb/android0/enable 1

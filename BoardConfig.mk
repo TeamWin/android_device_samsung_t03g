@@ -31,10 +31,11 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_SOC := exynos4210
 #TARGET_SOC := exynos4x12
 TARGET_HAL_PATH := hardware/samsung/exynos4/hal
+TARGET_ARCH := arm
 
 BOARD_KERNEL_CMDLINE :=  console=ttyHSL0,115200,n8 androidboot.hardware=jet
 BOARD_KERNEL_BASE :=  0x10000000
-BOARD_FORCE_RAMDISK_ADDRESS := 0x11000000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x11000000
 BOARD_KERNEL_PAGESIZE := 2048
 
 # These, I'm sure, are all WRONG!
@@ -56,6 +57,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_INITRC := device/samsung/n7100/recovery/init.rc
 
 # TWRP specific build flags
+BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_15x24.h\"
 DEVICE_RESOLUTION := 720x1280
 TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
@@ -72,4 +74,12 @@ SP1_MOUNTABLE := 1
 SP2_NAME := "modem"
 SP2_BACKUP_METHOD := image
 SP2_MOUNTABLE := 0
-TW_INCLUDE_JB_CRYPTO := true
+TW_INCLUDE_FUSE_EXFAT := true
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_SAMSUNG := true
+TW_CRYPTO_FS_TYPE := "ext4"
+TW_CRYPTO_REAL_BLKDEV := "/dev/block/mmcblk0p16"
+TW_CRYPTO_MNT_POINT := "/data"
+TW_CRYPTO_FS_OPTIONS := "noatime,nosuid,nodev,discard,noauto_da_alloc,journal_async_commit,errors=panic wait,check,encryptable=footer"
+TW_CRYPTO_FS_FLAGS := "0x00000406"
+TW_CRYPTO_KEY_LOC := "footer"
