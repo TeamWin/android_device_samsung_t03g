@@ -16,11 +16,12 @@ on init
     mkdir /preload
     mkdir /efs
     mount /tmp /tmp tmpfs
-
+    ulimit -c unlimited
 # ko files for exfat
-    insmod /lib/modules/exfat_core.ko
-    insmod /lib/modules/exfat_fs.ko
+    #insmod /system/lib/modules/exfat_core.ko
+    #insmod /system/lib/modules/exfat_fs.ko
     write /sys/devices/platform/s5p-dsim.0/s6evr02/backlight/panel/brightness 180
+    write /proc/sys/vm/overcommit_memory 1
 
 on boot
 

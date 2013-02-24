@@ -19,13 +19,16 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
         device/samsung/t0lteatt/recovery/init.rc:root/init.rc \
-        device/samsung/t0lteatt/modules/exfat_fs.ko:root/system/lib/exfat_fs.ko \
-        device/samsung/t0lteatt/modules/exfat_core.ko:root/system/lib/exfat_core.ko \
+        device/samsung/t0lteatt/recovery/poweroff.sh:root/sbin/poweroff.sh \
+        device/samsung/t0lteatt/modules/exfat_fs.ko:root/system/lib/modules/exfat_fs.ko \
+        device/samsung/t0lteatt/modules/exfat_core.ko:root/system/lib/modules/exfat_core.ko \
         device/samsung/t0lteatt/recovery/encryption/libkeyutils.so:root/sbin/libkeyutils.so \
         device/samsung/t0lteatt/recovery/encryption/libsec_ecryptfs.so:root/sbin/libsec_ecryptfs.so \
         device/samsung/t0lteatt/recovery/encryption/libsec_km.so:root/sbin/libsec_km.so
 
 $(call inherit-product, build/target/product/full.mk)
+
+PRODUCT_PACKAGES += external/valgrind
 
 PRODUCT_NAME := cm_t0lteatt
 PRODUCT_BRAND := Samsung
