@@ -4,6 +4,6 @@
 /modem	                emmc            /dev/block/mmcblk0p10
 /cache                  ext4            /dev/block/mmcblk0p12
 /system                 ext4            /dev/block/mmcblk0p13
-/data                   ext4            /dev/block/mmcblk0p16
+/data                   ext4            /dev/block/mmcblk0p16	length=-32768
 
 /external_sdcard        exfat           /dev/block/mmcblk1p1	/dev/block/mmcblk1
