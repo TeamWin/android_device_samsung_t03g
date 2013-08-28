@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/n7100/BoardConfigVendor.mk
+-include vendor/samsung/t03g/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := smdk4x12
@@ -45,7 +45,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/samsung/n7100/kernAl
+TARGET_PREBUILT_KERNEL := device/samsung/t03g/kernAl
 
 # Recovery:Start
 
@@ -54,7 +54,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Recovery: set depending on recovery being built for. (CWM or TWRP)
 #           both init scripts can be found in the recovery folder
-TARGET_RECOVERY_INITRC := device/samsung/n7100/recovery/init.rc
+TARGET_RECOVERY_INITRC := device/samsung/t03g/recovery/init.rc
 
 # TWRP specific build flags
 BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_15x24.h\"
@@ -86,3 +86,4 @@ TW_BRIGHTNESS_PATH := "/sys/devices/platform/s5p-dsim.0/s6evr02/backlight/panel/
 TW_MAX_BRIGHTNESS := 255
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/virtual/android_usb/android0/f_mass_storage/lun0/file
+TW_INCLUDE_FB2PNG := true
