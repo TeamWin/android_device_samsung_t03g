@@ -3,7 +3,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/t03g/n7100-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/t03g/t03g-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/t03g/overlay
 
