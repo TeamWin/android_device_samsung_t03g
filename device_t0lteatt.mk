@@ -24,7 +24,8 @@ PRODUCT_COPY_FILES += \
         device/samsung/t0lteatt/modules/exfat_core.ko:root/system/lib/modules/exfat_core.ko \
         device/samsung/t0lteatt/recovery/encryption/libkeyutils.so:root/sbin/libkeyutils.so \
         device/samsung/t0lteatt/recovery/encryption/libsec_ecryptfs.so:root/sbin/libsec_ecryptfs.so \
-        device/samsung/t0lteatt/recovery/encryption/libsec_km.so:root/sbin/libsec_km.so
+        device/samsung/t0lteatt/recovery/encryption/libsec_km.so:root/sbin/libsec_km.so \
+	device/samsung/t0ltetmo/recovery/runatboot.sh:root/sbin/runatboot.sh
 
 $(call inherit-product, build/target/product/full.mk)
 
