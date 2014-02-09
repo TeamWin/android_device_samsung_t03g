@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/t0lteatt/BoardConfigVendor.mk
+-include vendor/samsung/t03g/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := smdk4x12
@@ -26,6 +26,7 @@ endif
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_VARIANT := cortex-a9
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_SOC := exynos4210
@@ -45,7 +46,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/samsung/t0lteatt/kernAl
+TARGET_PREBUILT_KERNEL := device/samsung/t03g/kernAl
 
 # Recovery:Start
 
@@ -54,7 +55,8 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Recovery: set depending on recovery being built for. (CWM or TWRP)
 #           both init scripts can be found in the recovery folder
-TARGET_RECOVERY_INITRC := device/samsung/t0lteatt/recovery/init.rc
+TARGET_RECOVERY_INITRC := device/samsung/t03g/recovery/init.rc
+HAVE_SELINUX := true
 
 # TWRP specific build flags
 BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_15x24.h\"
@@ -87,7 +89,8 @@ TW_BRIGHTNESS_PATH := "/brightness"
 #TW_BRIGHTNESS_PATH := "/sys/devices/platform/s5p-dsim.0/s6evr02/backlight/panel/brightness"
 TW_MAX_BRIGHTNESS := 255
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 TW_INCLUDE_FB2PNG := true
 HAVE_SELINUX := true
 TW_NO_EXFAT_FUSE := true
-USE_SELINUX := true
+HAVE_SELINUX := true
