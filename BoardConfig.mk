@@ -55,8 +55,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Recovery: set depending on recovery being built for. (CWM or TWRP)
 #           both init scripts can be found in the recovery folder
-TARGET_RECOVERY_INITRC := device/samsung/t03g/recovery/init.rc
-HAVE_SELINUX := true
+#TARGET_RECOVERY_INITRC := device/samsung/t03g/recovery/init.rc
 
 # TWRP specific build flags
 BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_15x24.h\"
@@ -77,8 +76,8 @@ SP2_NAME := "modem"
 SP2_BACKUP_METHOD := image
 SP2_MOUNTABLE := 0
 #TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/virtual/android_usb/android0/f_mass_storage/lun0/file
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_SAMSUNG := true
+TW_INCLUDE_JB_CRYPTO := true
+#TW_INCLUDE_CRYPTO_SAMSUNG := true
 TW_CRYPTO_FS_TYPE := "ext4"
 TW_CRYPTO_REAL_BLKDEV := "/dev/block/mmcblk0p16"
 TW_CRYPTO_MNT_POINT := "/data"
@@ -91,6 +90,5 @@ TW_MAX_BRIGHTNESS := 255
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TW_INCLUDE_FB2PNG := true
-HAVE_SELINUX := true
 TW_NO_EXFAT_FUSE := true
-HAVE_SELINUX := true
+TW_NO_EXFAT := true
