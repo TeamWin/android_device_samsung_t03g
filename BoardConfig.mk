@@ -47,6 +47,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_PREBUILT_KERNEL := device/samsung/t03g/kernAl
+BOARD_NEEDS_LZMA_MINIGZIP := true
 
 # Recovery:Start
 
@@ -76,8 +77,7 @@ SP2_NAME := "modem"
 SP2_BACKUP_METHOD := image
 SP2_MOUNTABLE := 0
 #TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/virtual/android_usb/android0/f_mass_storage/lun0/file
-TW_INCLUDE_JB_CRYPTO := true
-#TW_INCLUDE_CRYPTO_SAMSUNG := true
+TW_INCLUDE_CRYPTO := true
 TW_CRYPTO_FS_TYPE := "ext4"
 TW_CRYPTO_REAL_BLKDEV := "/dev/block/mmcblk0p16"
 TW_CRYPTO_MNT_POINT := "/data"
@@ -89,6 +89,6 @@ TW_BRIGHTNESS_PATH := "/brightness"
 TW_MAX_BRIGHTNESS := 255
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-TW_INCLUDE_FB2PNG := true
 TW_NO_EXFAT_FUSE := true
 TW_NO_EXFAT := true
+TW_EXCLUDE_SUPERSU := true
