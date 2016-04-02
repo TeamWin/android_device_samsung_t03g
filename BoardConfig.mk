@@ -70,12 +70,6 @@ BOARD_HAS_NO_REAL_SDCARD := true
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 TW_NO_USB_STORAGE := true
 TWRP_EVENT_LOGGING := false
-SP1_NAME := "efs"
-SP1_BACKUP_METHOD := files
-SP1_MOUNTABLE := 1
-SP2_NAME := "modem"
-SP2_BACKUP_METHOD := image
-SP2_MOUNTABLE := 0
 #TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/virtual/android_usb/android0/f_mass_storage/lun0/file
 TW_INCLUDE_CRYPTO := true
 TW_CRYPTO_FS_TYPE := "ext4"
