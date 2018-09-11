@@ -20,4 +20,4 @@ BOARD_KERNEL_CMDLINE := console=ttySAC2,115200 buildvariant=eng androidboot.seli
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-nullBOARD_CUSTOM_BOOTIMG_MK := device/generic/twrpbuilder/mkbootimg_lzma.mk
+BOARD_NEEDS_LZMA_MINIGZIP := true
