@@ -22,5 +22,5 @@
 /system                 ext4            /dev/block/mmcblk0p13	flags=display="System";backup=1
 /data                   ext4            /dev/block/mmcblk0p16	length=-32768	flags=backup=1
 /misc                   emmc            /dev/block/platform/dw_mmc/by-name/OTA
-/external_sdcard        vfat           /dev/block/mmcblk1p1	/dev/block/mmcblk1	flags=display="External SDCard";storage;wipeingui;removable
-/usb-otg         vfat       /dev/block/sda1	/dev/block/sda	flags=display="USB-OTG";storage;wipeingui;removable
+/external_sdcard        auto           /dev/block/mmcblk1p1	/dev/block/mmcblk1	flags=display="External SDCard";storage;wipeingui;removable
+/usb-otg         auto       /dev/block/sda1	/dev/block/sda	flags=display="USB-OTG";storage;wipeingui;removable
